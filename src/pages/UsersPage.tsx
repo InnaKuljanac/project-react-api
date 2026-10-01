@@ -19,11 +19,13 @@ const UsersPage = () => {
   if (!users) return <p>Inga användare hittades.</p> //krävs för att kontrollera så users faktiskt har ett värde innan det används i map, då den ej får vara "undefined"
 
   return (
-    <>
-      {users.map((user) => (
-        <UserCard key={user.id} user={user} />
-      ))}
-    </>
+    <section className=" py-8">
+      <div className="flex flex-wrap justify-center gap-4">
+        {users.map((user) => (
+          <UserCard key={user.id} user={user} />
+        ))}
+      </div>
+    </section>
   )
 }
 

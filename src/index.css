@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+:root {
+  /* Background */
+  --color-background: #faf9ff;
+  --color-card: #ffffff;
+
+  /* Primary - violet */
+  --color-primary: #a855f7;
+  --color-primary-light: #f3e8ff;
+  --color-primary-dark: #9333ea;
+
+  /* Secondary - pink */
+  --color-secondary: #ec4899;
+  --color-secondary-light: #fce7f3;
+
+  /* Accent - blue */
+  --color-accent: #60a5fa;
+  --color-accent-light: #dbeafe;
+
+  /* Text */
+  --color-text: #0f172a;
+  --color-text-secondary: #64748b;
+
+  /* Border */
+  --color-border: #e2e8f0;
+
+  /* Status */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #f43f5e;
+}
+
+/* Dark mode */
+.dark {
+  --color-background: #0f172a;
+  --color-card: #1e293b;
+
+  --color-text: #f8fafc;
+  --color-text-secondary: #94a3b8;
+
+  --color-border: #334155;
+
+  --color-primary: #a855f7;
+  --color-primary-light: #3b0764;
+
+  --color-secondary: #ec4899;
+  --color-secondary-light: #500724;
+
+  --color-accent: #60a5fa;
+  --color-accent-light: #172554;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  background-image: url("/Users/inna/Documents/Kod/TH-projects/project-react-api/src/assets/Pastellfärgad-abstrakt-gradientbakgrund.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
