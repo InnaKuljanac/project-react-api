@@ -1,7 +1,18 @@
+import Navbar from "../components/Navbar"
+import UserButton from "../components/UserButton"
+import UserInputfield from "../components/UserInputfield"
+
 const LandingPage = () => {
   return (
     <>
-      <h1>test</h1>
+      <Navbar />
+
+      <section>
+        <h1>Välkomstext</h1>
+        <p>prompt text att avnändare ska skriva un emial/användarnamn</p>
+        <UserInputfield />
+        <UserButton />
+      </section>
     </>
   )
 }
