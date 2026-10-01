@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
-import { fetchUsers } from "../api/FetchUsers"
+import { fetchUsers } from "../api/fetchUsers"
+import UserCard from "../components/UserCard"
 
-const ProfilePage = () => {
+const UsersPage = () => {
   const {
     data: users,
     error,
@@ -18,13 +19,11 @@ const ProfilePage = () => {
 
   return (
     <>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>{user.username}</li>
-        ))}
-      </ul>
+      {users.map((user) => (
+        <UserCard user={user} />
+      ))}
     </>
   )
 }
 
-export default ProfilePage
+export default UsersPage

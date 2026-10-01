@@ -1,32 +1,4 @@
-interface Address {
-  street: string
-  city: string
-  zipCode: string
-}
-
-interface Profile {
-  name: string
-  email: string
-  address: Address
-}
-
-interface Settings {
-  theme: string
-  notifications: Notifications
-}
-
-interface Notifications {
-  email: boolean
-  push: boolean
-}
-
-interface User {
-  id: number
-  username: string
-  profile: Profile
-  settings: Settings
-  roles: string[]
-}
+import type { User } from "../types/User"
 
 const fetchUsers = async (): Promise<User[]> => {
   const USER_API = "https://api-userapi.onrender.com/api/users/getUsers"
