@@ -1,17 +1,16 @@
-import Navbar from "../components/Navbar"
-import UserButton from "../components/UserButton"
-import UserInputfield from "../components/UserInputfield"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   return (
     <>
-      <Navbar />
-
       <section>
-        <h1>Välkomstext</h1>
-        <p>prompt text att avnändare ska skriva un emial/användarnamn</p>
-        <UserInputfield />
-        <UserButton />
+        <div>
+          <h1>HERO</h1>
+          <Link to={"/users"}>Se alla användare</Link>
+        </div>
+
+        <div>info</div>
+        <div>stats</div>
       </section>
     </>
   )
