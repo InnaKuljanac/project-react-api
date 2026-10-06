@@ -17,6 +17,7 @@
   /* Accent - blue */
   --color-accent: #60a5fa;
   --color-accent-light: #dbeafe;
+  --color-accent-green: #afe3cd;
 
   /* Text */
   --color-text: #0f172a;
@@ -29,26 +30,6 @@
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #f43f5e;
-}
-
-/* Dark mode */
-.dark {
-  --color-background: #0f172a;
-  --color-card: #1e293b;
-
-  --color-text: #f8fafc;
-  --color-text-secondary: #94a3b8;
-
-  --color-border: #334155;
-
-  --color-primary: #a855f7;
-  --color-primary-light: #3b0764;
-
-  --color-secondary: #ec4899;
-  --color-secondary-light: #500724;
-
-  --color-accent: #60a5fa;
-  --color-accent-light: #172554;
 }
 
 body {

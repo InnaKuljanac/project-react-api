@@ -15,7 +15,13 @@ const UsersPage = () => {
   })
 
   if (isLoading) return <Loading />
-  if (error) return <p>Ett fel uppstod: {error.message}</p>
+  if (error)
+    return (
+      <p className="mx-auto my-12 max-w-2xl rounded-2xl border border-(--color-warning) bg-(--color-card) px-6 py-5 text-center text-sm leading-6 text-(--color-text) shadow-sm">
+        Oj, något gick fel! Vi kunde inte hämta användarna just nu. Försök gärna igen om en liten stund. Felkod:{" "}
+        {error.message}
+      </p>
+    )
 
   if (!users || users.length === 0) {
     return <p>Ingen data hittades.</p>
