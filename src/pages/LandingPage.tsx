@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom"
+import Stats from "../components/Stats"
+import { fetchUsers } from "../api/fetchUsers"
+import { useQuery } from "@tanstack/react-query"
+import { Loading } from "../components/Loading"
 
 const LandingPage = () => {
+  const {
+    data: users,
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["users"],
+    queryFn: fetchUsers,
+  })
+
+  if (isLoading) return <Loading />
+  if (error) return <p>Ett fel uppstod: {error.message}</p>
+  if (!users) return <p>Ingen data hittades.</p> //krävs för att kontrollera så users faktiskt har ett värde innan det används, då den ej får vara "undefined"
+
   return (
     <section className="min-h-screen px-6 py-12 text-slate-900 sm:px-10">
       <div className="mx-auto max-w-5xl">
@@ -12,6 +29,8 @@ const LandingPage = () => {
           <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
             En samlad plats för att se profiler, roller och inställningar.
           </p>
+
+          {/* Knapp som leder till /users där man se alla användare */}
           <Link
             to="/users"
             className="mt-8 inline-flex items-center rounded-xl bg-violet-700 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-violet-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-700">
@@ -21,18 +40,8 @@ const LandingPage = () => {
             </span>
           </Link>
         </div>
-
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="font-semibold">Profiler på ett ställe</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Få en snabb överblick över användarnas namn, ort och roller.
-            </p>
-          </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="font-semibold">Inställningar direkt i vyn</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">Se tema och notifieringsval i varje användarkort.</p>
-          </article>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Stats users={users} />
         </div>
       </div>
     </section>

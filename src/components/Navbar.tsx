@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between bg-(--color-background) p-4 rounded-2xl">
+    <nav className="flex justify-between bg-(--color-primary-light) p-4 rounded-2xl border-(--color-primary) border-b sticky top-0">
       <div className=" flex gap-6">
         <button>
           <NavLink
@@ -23,8 +23,6 @@ const Navbar = () => {
           </NavLink>
         </button>
       </div>
-
-      <p>Toggla dark/light mode</p>
     </nav>
   )
 }
