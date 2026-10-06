@@ -12,7 +12,7 @@ const fetchUsers = async (): Promise<User[]> => {
     })
 
     if (!res.ok) {
-      throw new Error("Kunde inte genomföra fetch")
+      throw new Error(`API-fel: ${res.status}`) //ger meddelande om vilket http fel som uppstod
     }
 
     return await res.json()

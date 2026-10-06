@@ -16,7 +16,7 @@ const Stats = ({ users }: StatsProps) => {
 
   return (
     <>
-      <article className="relative overflow-hidden rounded-xl border border-violet-100 bg-gradient-to-br from-white to-violet-50 p-4 shadow-sm">
+      <article className="relative overflow-hidden rounded-xl border border-violet-100 bg-linear-to-br from-white to-violet-50 p-4 shadow-sm">
         <div className="absolute right-0 top-0 h-16 w-16 rounded-full bg-violet-200/40 blur-2xl" />
         <div className="relative">
           <h2 className=" text-violet-700">
@@ -27,10 +27,10 @@ const Stats = ({ users }: StatsProps) => {
         </div>
       </article>
 
-      <article className="relative overflow-hidden rounded-xl border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-4 shadow-sm">
+      <article className="relative overflow-hidden rounded-xl border border-blue-100 bg-linear-to-br from-white to-blue-50 p-4 shadow-sm">
         <div className="absolute right-0 top-0 h-16 w-16 rounded-full bg-blue-200/40 blur-2xl" />
         <div className="relative">
-          <h2 className="text-s font-bold font-semibold uppercase tracking-wide text-blue-700">
+          <h2 className="text-s  font-semibold uppercase tracking-wide text-blue-700">
             <ShieldUser size={38} />
           </h2>
           <p className="mt-3 p-2 text-4xl font-bold tracking-tight text-slate-900">{totalAdmins}</p>
@@ -38,10 +38,10 @@ const Stats = ({ users }: StatsProps) => {
         </div>
       </article>
 
-      <article className="relative overflow-hidden rounded-xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-4 shadow-sm">
+      <article className="relative overflow-hidden rounded-xl border border-emerald-100 bg-linear-to-br from-white to-emerald-50 p-4 shadow-sm">
         <div className="absolute right-0 top-0 h-16 w-16 rounded-full bg-emerald-200/40 blur-2xl" />
         <div className="relative">
-          <h2 className="text-s font-bold font-semibold uppercase tracking-wide text-emerald-700">
+          <h2 className="text-s font-semibold uppercase tracking-wide text-emerald-700">
             <UserPen size={38} />
           </h2>
           <p className="mt-3 p-2 text-4xl font-bold tracking-tight text-slate-900">{totalEditors}</p>
@@ -49,9 +49,9 @@ const Stats = ({ users }: StatsProps) => {
         </div>
       </article>
 
-      <article className="relative overflow-hidden rounded-xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50 p-4 shadow-sm">
+      <article className="relative overflow-hidden rounded-xl border border-emerald-100 bg-linear-to-br from-white to-emerald-50 p-4 shadow-sm">
         <div className="relative">
-          <h2 className="text-s font-bold font-semibold uppercase tracking-wide text-emerald-800">
+          <h2 className="text-s  font-semibold uppercase tracking-wide text-emerald-800">
             <Headset size={38} />
           </h2>
           <p className="mt-3 p-2 text-4xl font-bold tracking-tight text-slate-900">{totalSupport}</p>
